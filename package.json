@@ -5,5 +5,11 @@
   "main": "index.js",
   "repository": "https://github.com/dragonwarrior00/Trello-PowerUp-CompleteButton.git",
   "author": "DragonWarrior00 <lamberthjosh@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build": "parcel build src/html/*.html"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
 }

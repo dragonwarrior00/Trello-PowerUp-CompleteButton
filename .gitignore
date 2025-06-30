@@ -1,1 +1,10 @@
 # Trello-PowerUp-CompleteButton GITIGNORE
+
+# Yarn modules
+node_modules/
+
+# Parcel.js cache folder
+.cache/
+
+# Parcel.js build folder
+dist/
