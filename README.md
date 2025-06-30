@@ -1,1 +1,1 @@
-# Trello-PowerUp-CompleteButton README
+# Trello-PowerUp-CompleteButton
