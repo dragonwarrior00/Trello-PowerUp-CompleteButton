@@ -1,0 +1,8 @@
+{
+  "name": "Trello-PowerUp-CompleteButton",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/dragonwarrior00/Trello-PowerUp-CompleteButton.git",
+  "author": "DragonWarrior00 <lamberthjosh@gmail.com>",
+  "license": "MIT"
+}
