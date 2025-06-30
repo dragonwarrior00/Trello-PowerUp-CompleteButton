@@ -1,6 +1,7 @@
 {
   "name": "Trello-PowerUp-CompleteButton",
   "version": "1.0.0",
+  "description": "A Trello Power-Up that will put a Complete button on the card",
   "main": "index.js",
   "repository": "https://github.com/dragonwarrior00/Trello-PowerUp-CompleteButton.git",
   "author": "DragonWarrior00 <lamberthjosh@gmail.com>",
