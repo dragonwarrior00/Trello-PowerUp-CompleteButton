@@ -14,7 +14,7 @@ window.TrelloPowerUp.initialize({
             // to refresh you can mix and match between static and dynamic
             title: "Complete Button",
             text: "Complete",
-            color: Green,
+            color: green(),
           },
         ];
       });
