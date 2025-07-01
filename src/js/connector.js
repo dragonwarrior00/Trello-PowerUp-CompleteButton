@@ -12,9 +12,9 @@ window.TrelloPowerUp.initialize({
           {
             // its best to use static badges unless you need your badges
             // to refresh you can mix and match between static and dynamic
-            title: "Complete Button",
+            title: "Mark as Complete",
             text: "Complete",
-            color: null,
+            color: green(),
           },
         ];
       });
