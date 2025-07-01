@@ -4,20 +4,19 @@ window.TrelloPowerUp.initialize({
   "card-detail-badges": function (t, opts) {
     return t
       .card("name")
-      .get("name")
+      //.get("name")
+      .card("all")
       .then(function (cardName) {
         console.log("We just loaded the card name for fun: " + cardName);
 
         return [
           {
-            // its best to use static badges unless you need your badges
-            // to refresh you can mix and match between static and dynamic
+            // create detail badge itself
             title: "Mark as Complete",
             text: "Complete",
             color: "green",
             callback: function (t, opts) {
               // function to run on click
-              // do something
               console.log("The button to complete has been clicked.")
             },
           },
