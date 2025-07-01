@@ -5,8 +5,8 @@ window.TrelloPowerUp.initialize({
     return t
       .card("name","labels","closed")
       .get("name")
-      .then(function (cardName) {
-        console.log("We just loaded the card name for fun: " + cardName);
+      .then(function (card) {
+        console.log("We just loaded the card name for fun: " + cardName + cardClosed);
 
 
         return [
