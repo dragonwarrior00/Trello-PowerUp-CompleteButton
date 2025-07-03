@@ -12,12 +12,13 @@ window.TrelloPowerUp.initialize({
         return [
           {
             // create detail badge itself
-            title: "Mark as Complete",
+            // title: "Mark as Complete",
             text: "Complete",
             color: "green",
             callback: function (t, opts) {
               // function to run on click
               console.log("The button to complete has been clicked.")
+              console.log("Card info: " card.name + card.labels + card.closed)
             },
           },
         ];
