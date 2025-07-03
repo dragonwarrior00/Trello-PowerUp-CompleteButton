@@ -4,10 +4,9 @@ window.TrelloPowerUp.initialize({
   "card-detail-badges": function (t, opts) {
     return t
       .card("name","labels","closed")
-      .get("name")
+      //.get("name")
       .then(function (card) {
-        console.log("We just loaded the card name for fun: " + cardName + cardClosed);
-
+        console.log("We just loaded the card name for fun: " + card);
 
         return [
           {
@@ -17,8 +16,7 @@ window.TrelloPowerUp.initialize({
             color: "green",
             callback: function (t, opts) {
               // function to run on click
-              console.log("The button to complete has been clicked.")
-              console.log("Card info: " card.name + card.labels + card.closed)
+              console.log("The button to complete has been clicked.");
             },
           },
         ];
