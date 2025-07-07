@@ -11,7 +11,7 @@ window.TrelloPowerUp.initialize({
         return [
           {
             // create detail badge itself
-            title: null,
+            title: "Mark as Complete",
             text: "Complete",
             color: "green",
             callback: function (t, opts) {
