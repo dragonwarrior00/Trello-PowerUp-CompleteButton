@@ -6,12 +6,12 @@ window.TrelloPowerUp.initialize({
       .card("name","labels","closed")
       //.get("name")
       .then(function (card) {
-        console.log("We just loaded the card name for fun: " + card);
+        console.log(card);
 
         return [
           {
             // create detail badge itself
-            title: "",
+            title: "Mark as Complete",
             text: "Complete",
             color: "green",
             callback: function (t, opts) {
