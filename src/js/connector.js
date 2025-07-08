@@ -3,7 +3,7 @@ console.log("Hello World!")
 const getCompleteDetailBadge = function(t) {
   return t
       //.card("name","labels","closed")
-      .card(all)
+      .card("all")
       //.get("name")
       .then(function (card) {
 
