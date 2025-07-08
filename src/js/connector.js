@@ -3,7 +3,8 @@ console.log("Hello World!")
 window.TrelloPowerUp.initialize({
   "card-detail-badges": function (t, opts) {
     return t
-      .card("name","labels","closed")
+      //.card("name","labels","closed")
+      .card(all)
       //.get("name")
       .then(function (card) {
 
