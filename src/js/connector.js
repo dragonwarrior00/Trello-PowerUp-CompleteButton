@@ -18,7 +18,7 @@ window.TrelloPowerUp.initialize({
             callback: function (t) {
               // function to run on click
               console.log("The button to complete has been clicked.");
-              console.log("card.name")
+              console.log(card.name)
               //return t.set("card", "shared", )
             },
           },
