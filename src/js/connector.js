@@ -1,8 +1,7 @@
 console.log("Hello World!")
 
-window.TrelloPowerUp.initialize({
-  "card-detail-badges": function (t, opts) {
-    return t
+const getCompleteDetailBadge = function(t) {
+  return t
       //.card("name","labels","closed")
       .card(all)
       //.get("name")
@@ -25,5 +24,12 @@ window.TrelloPowerUp.initialize({
           },
         ];
       });
+}
+
+
+window.TrelloPowerUp.initialize({
+  "card-detail-badges": function (t) {
+    // return an array of cards that adds Complete Badge
+    return getCompleteDetailBadge(t)
   },
 });
