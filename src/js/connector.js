@@ -2,7 +2,8 @@ console.log("Hello World!")
 
 const getCompleteDetailBadge = function(t) {
   return t
-      //.card("name","labels","closed")
+      // duecomplete = Archived, closed = Mark complete
+      //.card("name","labels","duecomplete","closed","labels")
       .card("all")
       //.get("name")
       .then(function (card) {
