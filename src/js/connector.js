@@ -15,9 +15,11 @@ window.TrelloPowerUp.initialize({
             title: "Mark as Complete",
             text: "Complete",
             color: "green",
-            callback: function (t, opts) {
+            callback: function (t) {
               // function to run on click
               console.log("The button to complete has been clicked.");
+              console.log("card.name")
+              //return t.set("card", "shared", )
             },
           },
         ];
