@@ -20,19 +20,19 @@ const getCompleteDetailBadge = function(t) {
               // function to run on click
               console.log("The button to complete has been clicked.");
 
-              // no actions needed if already archived.
-              if (card.duecomplete === "true"){
-                return [];
-              }
+              // // no actions needed if already archived.
+              // if (card.duecomplete === "true"){
+              //   return [];
+              // }
 
-              // put in the card in a complete state = mark complete, change label, archive
-              if (card.duecomplete === "false"){
+              // // put in the card in a complete state = mark complete, change label, archive
+              // if (card.duecomplete === "false"){
 
-                console.log("Card Archived State: " + card.duecomplete)
-                // return t.set("card", "shared", "closed", "true")
-                // return t.set("card", "shared", "labels", "labels[0]")
-                // return t.set("card", "shared", "duecomplete", "true")
-              }
+              //   console.log("Card Archived State: " + card.duecomplete)
+              //   // return t.set("card", "shared", "closed", "true")
+              //   // return t.set("card", "shared", "labels", "labels[0]")
+              //   // return t.set("card", "shared", "duecomplete", "true")
+              // }
             },
           },
         ];
