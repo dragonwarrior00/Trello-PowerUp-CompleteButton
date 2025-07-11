@@ -32,7 +32,7 @@ const getCompleteDetailBadge = function(t) {
                 // return t.set("card", "shared", "labels", "labels[0]")
                 // return t.set("card", "shared", "duecomplete", "true")
 
-                console.log("Card Archived State: " + card.closed + " " + card.dueComplete)
+                console.log("Card Archived State: ")
               }
             },
           },
