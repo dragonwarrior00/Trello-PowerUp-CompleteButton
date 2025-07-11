@@ -3,8 +3,8 @@ console.log("Hello World!")
 const getCompleteDetailBadge = function(t) {
   return t
       // duecomplete = Archived, closed = Mark complete
-      //.card("name","labels","duecomplete","closed","labels")
-      .card("all")
+      .card("name","labels","duecomplete","closed")
+      //.card("all")
       //.get("name")
       .then(function (card) {
 
@@ -19,8 +19,20 @@ const getCompleteDetailBadge = function(t) {
             callback: function (t) {
               // function to run on click
               console.log("The button to complete has been clicked.");
-              console.log("Card Name: " + card.name)
-              //return t.set("card", "shared", )
+
+              // no actions needed if already archived.
+              if (card.duecomplete === "true"){
+                return [];
+              }
+
+              // put in the card in a complete state = mark complete, change label, archive
+              if (card.duecomplete === "false"){
+
+                console.log("Card Archived State: " + card.duecomplete)
+                // return t.set("card", "shared", "closed", "true")
+                // return t.set("card", "shared", "labels", "labels[0]")
+                // return t.set("card", "shared", "duecomplete", "true")
+              }
             },
           },
         ];
