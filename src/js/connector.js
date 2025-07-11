@@ -30,11 +30,14 @@ const getCompleteDetailBadge = function(t) {
 
                 console.log("Card Archived State: ")
 
-                return t.set('card', 'shared', 'completed', true);
+                // return t.set('card', 'shared', 'completed', true);
                 // .set("card", "shared", "labels", "labels[0]");
                 // .set("card", "shared", "duecomplete", "true");
 
-
+                return t.card('id').then(function(card) {
+                  // Assuming you have a custom field for completion
+                  return t.set('card', 'shared', 'completed', true); // Marking the card as complete
+                });
               }
             },
           },
