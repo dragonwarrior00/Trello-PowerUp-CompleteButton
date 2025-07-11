@@ -20,10 +20,10 @@ const getCompleteDetailBadge = function(t) {
               // function to run on click
               console.log("The button to complete has been clicked.");
 
-              // // no actions needed if already archived.
-              // if (card.duecomplete === "true"){
-              //   return [];
-              // }
+              // no actions needed if already archived.
+              if (card.duecomplete === "true"){
+                 return [];
+              }
 
               // // put in the card in a complete state = mark complete, change label, archive
               // if (card.duecomplete === "false"){
