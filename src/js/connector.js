@@ -21,12 +21,12 @@ const getCompleteDetailBadge = function(t) {
               console.log("The button to complete has been clicked.");
 
               // no actions needed if already archived.
-              if (card.dueComplete === "true"){
+              if (card.dueComplete == "true"){
                  return [];
               }
 
               // put in the card in a complete state = mark complete, change label, archive
-              if (card.dueComplete === "false"){
+              if (card.dueComplete == "false"){
 
                 console.log("Card Archived State: " + card.dueComplete)
               //   // return t.set("card", "shared", "closed", "true")
