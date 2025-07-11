@@ -32,6 +32,9 @@ const getCompleteDetailBadge = function(t) {
               //   // return t.set("card", "shared", "closed", "true")
               //   // return t.set("card", "shared", "labels", "labels[0]")
               //   // return t.set("card", "shared", "duecomplete", "true")
+              } else {
+                console.log("A swing and a miss")
+
               }
             },
           },
