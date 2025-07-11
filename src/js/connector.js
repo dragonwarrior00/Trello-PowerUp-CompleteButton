@@ -18,7 +18,7 @@ const getCompleteDetailBadge = function(t) {
             color: "green",
             callback: function (t) {
               // function to run on click
-              console.log("The button to complete has been clicked.");
+              console.log("The button to complete has been clicked." + card.dueComplete);
 
               // no actions needed if already archived.
               if (card.dueComplete == "true"){
