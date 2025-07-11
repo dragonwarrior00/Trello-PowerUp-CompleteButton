@@ -28,11 +28,14 @@ const getCompleteDetailBadge = function(t) {
               // put in the card in a complete state = mark complete, change label, archive
               if (!card.dueComplete){
 
-                return t.set("card", "shared", "closed", "true")
-                // return t.set("card", "shared", "labels", "labels[0]")
-                // return t.set("card", "shared", "duecomplete", "true")
-
                 console.log("Card Archived State: ")
+
+                return t
+                  .set("card", "shared", card.closed, "true");
+                // .set("card", "shared", "labels", "labels[0]");
+                // .set("card", "shared", "duecomplete", "true");
+
+
               }
             },
           },
