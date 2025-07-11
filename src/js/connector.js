@@ -29,12 +29,9 @@ const getCompleteDetailBadge = function(t) {
               if (!card.dueComplete){
 
                 console.log("Card Archived State: " + card.dueComplete)
-              //   // return t.set("card", "shared", "closed", "true")
-              //   // return t.set("card", "shared", "labels", "labels[0]")
-              //   // return t.set("card", "shared", "duecomplete", "true")
-              } else {
-                console.log("A swing and a miss")
-
+                return t.set("card", "shared", "closed", "true")
+                // return t.set("card", "shared", "labels", "labels[0]")
+                // return t.set("card", "shared", "duecomplete", "true")
               }
             },
           },
