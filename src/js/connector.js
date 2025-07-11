@@ -4,7 +4,7 @@ const getCompleteDetailBadge = function(t) {
   return t
       // duecomplete = Archived, closed = Mark complete
       //.card("name","labels","duecomplete","closed")
-      .card("name")
+      .card("name","duecomplete")
       //.card("all")
       //.get("name")
       .then(function (card) {
