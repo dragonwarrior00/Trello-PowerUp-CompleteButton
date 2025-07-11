@@ -8,7 +8,7 @@ const getCompleteDetailBadge = function(t) {
       //.get("name")
       .then(function (card) {
 
-        console.log(card);
+        //console.log(card);
 
         return [
           {
