@@ -30,7 +30,7 @@ const getCompleteDetailBadge = function(t) {
 
                 console.log("Card Archived State: ")
 
-                t.set("card", "shared", card.closed, true);
+                t.set("card", "shared", {key: card.closed} , true);
                 // .set("card", "shared", "labels", "labels[0]");
                 // .set("card", "shared", "duecomplete", "true");
 
