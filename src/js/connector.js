@@ -31,7 +31,7 @@ const getCompleteDetailBadge = function(t) {
                 console.log("Card Archived State: ")
 
                   // mark the card as complete
-                  return t.set('card', 'shared', card.closed, true); // Marking the card as complete
+                  return t.set('card', 'shared', 'closed', true); // Marking the card as complete
               }
             },
           },
