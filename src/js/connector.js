@@ -33,7 +33,10 @@ const getCompleteDetailBadge = function(t) {
                   // mark the card as complete
                   return t.set('card', 'shared', 'closed', true); // Marking the card as complete
               }
-            },
+            }.catch(function(error) {
+              console.error("Permission error: ", error);
+              // Handle the error (e.g., notify the user)
+            }),
           },
         ];
       });
