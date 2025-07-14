@@ -1,4 +1,6 @@
-const getModifyPermission = function (t) {
+const getModifyPermission = function (tt) {
+
+  console.log("KEY: %%API_KEY%%&" + "URL: %%API_RETURN_URL%%")
 
   const tt = window.TrelloPowerUp.iframe();
 
