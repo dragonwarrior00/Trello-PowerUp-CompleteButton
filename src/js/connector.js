@@ -1,15 +1,15 @@
-// const getModifyPermission = function (t) {
+const getModifyPermission = function (t) {
 
-//   const t = window.TrelloPowerUp.iframe();
+  const tt = window.TrelloPowerUp.iframe();
 
-//   // API_KEY, API_RETURN_URL = custom env variable in netlify
-//   const authURL =
-//     "https://trello.com/1/authorize?expiration=never" +
-//     "&scope=read&key=%%API_KEY%%&callback_method=fragment" +
-//     "&return_url=%%API_RETURN_URL%%";
+  // API_KEY, API_RETURN_URL = custom env variable in netlify
+  const authURL =
+    "https://trello.com/1/authorize?expiration=never" +
+    "&scope=read&key=%%API_KEY%%&callback_method=fragment" +
+    "&return_url=%%API_RETURN_URL%%";
 
 
-// }
+}
 
 const getCompleteDetailBadge = function(t) {
   return t
@@ -26,14 +26,6 @@ const getCompleteDetailBadge = function(t) {
                 text: "Complete",
                 color: "green",
                 callback: function (t) {
-
-                    const tt = window.TrelloPowerUp.iframe();
-
-                    // API_KEY, API_RETURN_URL = custom env variable in netlify
-                    const authURL =
-                      "https://trello.com/1/authorize?expiration=never" +
-                      "&scope=read&key=%%API_KEY%%&callback_method=fragment" +
-                      "&return_url=%%API_RETURN_URL%%";
 
                     // function to run on click
                     tt.authorize(authURL)
@@ -60,9 +52,9 @@ const getCompleteDetailBadge = function(t) {
 
 
 window.TrelloPowerUp.initialize({
-  // "on-enable": function (t){
-  //   return getModifyPermission(t)
-  // },
+  "on-enable": function (t){
+    return getModifyPermission(t)
+  },
   "card-detail-badges": function (t) {
     // return an array of cards that adds Complete Badge
     return getCompleteDetailBadge(t)
