@@ -27,7 +27,7 @@ const getCompleteDetailBadge = function(t) {
                 title: "Mark as Complete",
                 text: "Complete",
                 color: "green",
-                callback: function (t) {
+                callback: function (done) {
 
                   const t = window.TrelloPowerUp.iframe();
 
@@ -62,10 +62,10 @@ const getCompleteDetailBadge = function(t) {
 
 
 window.TrelloPowerUp.initialize({
-  // "on-enable": function (t){
+  // "on-enable": function (permission){
   //   return getModifyPermission(t)
   // },
-  "card-detail-badges": function (t) {
+  "card-detail-badges": function (carddetail) {
     // return an array of cards that adds Complete Badge
     return getCompleteDetailBadge(t)
   },
