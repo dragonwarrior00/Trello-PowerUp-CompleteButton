@@ -14,12 +14,14 @@ const getCompleteDetailBadge = function(t) {
                 color: "green",
                 callback: function (t) {
                     // function to run on click
-                    // put the card in a complete state (e.g. mark complete, change label, archive)
-                    return t.set('card', 'shared', 'closed', true).then(function() {
-                      console.log("Card marked as complete!");
-                    }).catch(function(error) {
-                      console.error("Permission error: ", error);
-                      // Notify the user about the permission issue
+                    return t.authorize().then(function(){
+                      // put the card in a complete state (e.g. mark complete, change label, archive)
+                      return t.set('card', 'shared', 'closed', true).then(function() {
+                        console.log("Card marked as complete!");
+                      }).catch(function(error) {
+                        console.error("Permission error: ", error);
+                        // Notify the user about the permission issue
+                      });
                     });
                 },
             }];
