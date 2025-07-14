@@ -1,14 +1,14 @@
 const getModifyPermission = function (modify) {
 
-  console.log("KEY: %%API_KEY%%&" + "URL: %%API_RETURN_URL%%")
+  console.log("KEY: %%API_KEY%%&" + " URL: %%API_RETURN_URL%%")
 
   const t = window.TrelloPowerUp.iframe();
 
   // API_KEY, API_RETURN_URL = custom env variable in netlify
   const authURL =
     "https://trello.com/1/authorize?expiration=never" +
-    "&scope=read&key=%%API_KEY%%&callback_method=fragment" +
-    "&return_url=%%API_RETURN_URL%%";
+    "&scope=read&key=d1aaeec275328ca489fb077f25dee106&callback_method=fragment" +
+    "&return_url=https://api.netlify.com/auth/done";
 
 
 }
