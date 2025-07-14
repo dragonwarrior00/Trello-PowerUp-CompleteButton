@@ -25,9 +25,9 @@ const getCompleteDetailBadge = function(t) {
                 title: "Mark as Complete",
                 text: "Complete",
                 color: "green",
-                callback: function (tt) {
+                callback: function (t) {
 
-                    const t = window.TrelloPowerUp.iframe();
+                    const tt = window.TrelloPowerUp.iframe();
 
                     // API_KEY, API_RETURN_URL = custom env variable in netlify
                     const authURL =
