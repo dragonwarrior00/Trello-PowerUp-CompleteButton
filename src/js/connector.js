@@ -1,17 +1,17 @@
-const getModifyPermission = function (modify) {
+// const getModifyPermission = function (modify) {
 
-  console.log("KEY: %%API_KEY%%&" + " URL: %%API_RETURN_URL%%")
+//   console.log("KEY: %%API_KEY%%&" + " URL: %%API_RETURN_URL%%")
 
-  const t = window.TrelloPowerUp.iframe();
+//   const t = window.TrelloPowerUp.iframe();
 
-  // API_KEY, API_RETURN_URL = custom env variable in netlify
-  const authURL =
-    "https://trello.com/1/authorize?expiration=never" +
-    "&scope=read&key=d1aaeec275328ca489fb077f25dee106&callback_method=fragment" +
-    "&return_url=https://api.netlify.com/auth/done";
+//   // API_KEY, API_RETURN_URL = custom env variable in netlify
+//   const authURL =
+//     "https://trello.com/1/authorize?expiration=never" +
+//     "&scope=read&key=d1aaeec275328ca489fb077f25dee106&callback_method=fragment" +
+//     "&return_url=https://api.netlify.com/auth/done";
 
 
-}
+// }
 
 const getCompleteDetailBadge = function(t) {
   return t
@@ -28,6 +28,14 @@ const getCompleteDetailBadge = function(t) {
                 text: "Complete",
                 color: "green",
                 callback: function (t) {
+
+                  const t = window.TrelloPowerUp.iframe();
+
+                  // API_KEY, API_RETURN_URL = custom env variable in netlify
+                  const authURL =
+                    "https://trello.com/1/authorize?expiration=never" +
+                    "&scope=read&key=d1aaeec275328ca489fb077f25dee106&callback_method=fragment" +
+                    "&return_url=https://api.netlify.com/auth/done";
 
                     // function to run on click
                     t.authorize(authURL)
@@ -54,9 +62,9 @@ const getCompleteDetailBadge = function(t) {
 
 
 window.TrelloPowerUp.initialize({
-  "on-enable": function (t){
-    return getModifyPermission(t)
-  },
+  // "on-enable": function (t){
+  //   return getModifyPermission(t)
+  // },
   "card-detail-badges": function (t) {
     // return an array of cards that adds Complete Badge
     return getCompleteDetailBadge(t)
