@@ -34,8 +34,8 @@ const getCompleteDetailBadge = function(t) {
                   // API_KEY, API_RETURN_URL = custom env variable in netlify
                   const authURL =
                     "https://trello.com/1/authorize?expiration=never" +
-                    "&scope=read&key=d1aaeec275328ca489fb077f25dee106&callback_method=fragment" +
-                    "&return_url=https://api.netlify.com/auth/done";
+                    "&scope=read&key='d1aaeec275328ca489fb077f25dee106'&callback_method=fragment" +
+                    "&return_url='https://api.netlify.com/auth/done'";
 
                     // function to run on click
                     t.authorize(authURL)
