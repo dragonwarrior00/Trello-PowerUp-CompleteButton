@@ -25,7 +25,7 @@ const getCompleteDetailBadge = function(t) {
                 title: "Mark as Complete",
                 text: "Complete",
                 color: "green",
-                callback: function (t) {
+                callback: function (tt) {
 
                     const t = window.TrelloPowerUp.iframe();
 
@@ -36,7 +36,7 @@ const getCompleteDetailBadge = function(t) {
                       "&return_url=%%API_RETURN_URL%%";
 
                     // function to run on click
-                    t.authorize(authURL)
+                    tt.authorize(authURL)
                       .then(function(token){
                         // put the card in a complete state (e.g. mark complete, change label, archive)
                         return t
