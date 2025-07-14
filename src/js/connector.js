@@ -1,8 +1,8 @@
-const getModifyPermission = function (tt) {
+const getModifyPermission = function (modify) {
 
   console.log("KEY: %%API_KEY%%&" + "URL: %%API_RETURN_URL%%")
 
-  const tt = window.TrelloPowerUp.iframe();
+  const t = window.TrelloPowerUp.iframe();
 
   // API_KEY, API_RETURN_URL = custom env variable in netlify
   const authURL =
@@ -30,7 +30,7 @@ const getCompleteDetailBadge = function(t) {
                 callback: function (t) {
 
                     // function to run on click
-                    tt.authorize(authURL)
+                    t.authorize(authURL)
                       .then(function(token){
                         // put the card in a complete state (e.g. mark complete, change label, archive)
                         return t
