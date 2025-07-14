@@ -34,7 +34,7 @@ const getCompleteDetailBadge = function(t) {
                   // API_KEY, API_RETURN_URL = custom env variable in netlify
 
                   const key = "d1aaeec275328ca489fb077f25dee106";
-                  const url = encodeURIComponent("https://api.netlify.com/auth/done");
+                  const url = encodeURIComponent("https://trello-powerup-completebutton.netlify.app/auth/callback");
 
                   const authURL =
                     "https://trello.com/1/authorize?expiration=never" +
