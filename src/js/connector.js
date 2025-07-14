@@ -1,10 +1,10 @@
-console.log("Hello World!")
-
 const getCompleteDetailBadge = function(t) {
   return t
       // duecomplete = Archived, closed = Mark complete
       .card("id","closed","labels","dueComplete")
       .then(function (card) {
+
+        console.log(card)
 
         if (!card.closed){
             return [{
