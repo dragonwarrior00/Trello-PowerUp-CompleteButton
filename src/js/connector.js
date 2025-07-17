@@ -31,10 +31,7 @@ const getCompleteDetailBadge = function(t) {
 
 
 window.TrelloPowerUp.initialize({
-  // 'on-enable': function (permission){
-  //   return getModifyPermission(t)
-  // },
-  'card-detail-badges': function (carddetail) {
+  'card-detail-badges': function (t) {
     // return an array of cards that adds Complete Badge
     return getCompleteDetailBadge(t)
   },
