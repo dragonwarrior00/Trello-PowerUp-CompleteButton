@@ -19,13 +19,13 @@ const getCompleteDetailBadge = function(t) {
                         return t.set('card', 'shared', 'archived', true).then(function () {
                             return t.closePopup();
                         });
+                    }).catch(function (error) {
+                        console.error('Error archiving card:', error);
                     });
                 }
             }];
         }
         // return [];
-    }).catch(function (error) {
-        console.error('Error archiving card:', error);
     });
 }
 
