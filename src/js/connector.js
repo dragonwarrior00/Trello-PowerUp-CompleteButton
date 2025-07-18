@@ -16,7 +16,7 @@ const getCompleteDetailBadge = function(t) {
                 callback: function (t) {
 
                     return t.get('card', 'id').then(function (cardId) {
-                        return t.set('card', 'public', 'archived', true).then(function () {
+                        return t.set('card', 'shared', 'archived', true).then(function () {
                             return t.closePopup();
                         });
                     }).catch(function (error) {
