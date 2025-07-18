@@ -11,12 +11,13 @@ const getCompleteDetailBadge = function(t) {
             return [{
                 // create detail badge itself
                 // title: 'Mark as Complete',
-                text: 'Complete',
+                title: '',
+                text: 'Mark as Complete',
                 color: 'green',
                 callback: function (t) {
 
                     t.get('card','shared').then(function (cardState){
-                        return t.set('card', 'shared', 'archived', true).then(function () {
+                        return t.set('card', 'archived', true).then(function () {
                             return t.closePopup();
                         });
                     }).catch(function (error) {
