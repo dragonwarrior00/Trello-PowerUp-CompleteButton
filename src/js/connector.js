@@ -15,20 +15,15 @@ const getCompleteDetailBadge = function(t) {
                 color: 'green',
                 callback: function (t) {
 
-                    console.log("Let's modify this card.")
-
-                    return t.get('card', 'id').then(function (cardId) {
-                        // return t.set('card', 'shared', 'archived', true).then(function () {
-                        //     return t.closePopup();
-                        // });
-                        console.log("Modifying card to archive mode.")
-                    }).catch(function (error) {
-                        console.error('Error archiving card:', error);
+                    return t.set('card', 'shared', 'archived', true).then(function () {
+                        return t.closePopup();
                     });
-                },
+                }
             }];
         }
-        return [];
+        // return [];
+    }).catch(function (error) {
+        console.error('Error archiving card:', error);
     });
 }
 
