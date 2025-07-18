@@ -15,8 +15,11 @@ const getCompleteDetailBadge = function(t) {
                 color: 'green',
                 callback: function (t) {
 
+                    t.get('card','id').then(function (cardState){
+
                     return t.set('card', 'shared', 'archived', true).then(function () {
                         return t.closePopup();
+                        });
                     });
                 }
             }];
