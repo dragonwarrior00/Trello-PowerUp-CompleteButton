@@ -13,10 +13,10 @@ const getCompleteDetailBadge = function(t) {
                 title: 'Mark as Complete',
                 text: 'Complete',
                 color: 'green',
-                callback: function (done) {
+                callback: function (t) {
 
                     return t.get('card', 'id').then(function (cardId) {
-                        return t.set('card', 'shared', 'archived', true).then(function () {
+                        return t.set('card', 'public', 'archived', true).then(function () {
                             return t.closePopup();
                         });
                     }).catch(function (error) {
