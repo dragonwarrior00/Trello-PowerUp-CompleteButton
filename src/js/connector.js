@@ -16,9 +16,10 @@ const getCompleteDetailBadge = function(t) {
                 callback: function (t) {
 
                     return t.get('card', 'id').then(function (cardId) {
-                        return t.set('card', 'shared', 'archived', true).then(function () {
-                            return t.closePopup();
-                        });
+                        // return t.set('card', 'shared', 'archived', true).then(function () {
+                        //     return t.closePopup();
+                        // });
+                        console.log("Modifying card to archive mode.")
                     }).catch(function (error) {
                         console.error('Error archiving card:', error);
                     });
