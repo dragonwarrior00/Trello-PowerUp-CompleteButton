@@ -10,7 +10,7 @@ const getCompleteDetailBadge = function(t) {
         if (!card.closed){
             return [{
                 // create detail badge itself
-                title: 'Mark as Complete',
+                // title: 'Mark as Complete',
                 text: 'Complete',
                 color: 'green',
                 callback: function (t) {
