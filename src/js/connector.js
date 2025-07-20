@@ -15,6 +15,7 @@ const getCompleteDetailBadge = function(t) {
                 text: 'Mark as Complete',
                 color: 'green',
                 callback: function (t) {
+                    console.log(t.memberCanWriteToModel('card'));
                     if (t.memberCanWriteToModel('card')){
                         t.get('card','shared').then(function (cardState){
                             return t.set('card', 'shared', 'archived', true).then(function () {
