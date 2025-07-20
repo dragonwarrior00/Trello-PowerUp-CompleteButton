@@ -15,14 +15,13 @@ const getCompleteDetailBadge = function(t) {
                 text: 'Mark as Complete',
                 color: 'green',
                 callback: function (t) {
-                    console.log("Can Write? " + t.memberCanWriteToModel('card'));
                     if (t.memberCanWriteToModel('card')){
                         t.get('card','shared').then(function (cardState){
                             return t.set('card', 'shared', 'archived', true).then(function () {
                                 return t.closePopup();
                             });
-                        }).catch(function (error) {
-                            console.error('Error archiving card:', error);
+                        // }).catch(function (error) {
+                        //     console.error('Error archiving card:', error);
                         });
                     }
                 }
