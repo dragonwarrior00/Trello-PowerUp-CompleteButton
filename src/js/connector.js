@@ -10,18 +10,17 @@ const getCompleteDetailBadge = function(t) {
         if (!card.closed){
             return [{
                 // create detail badge itself
-                // title: 'Mark as Complete',
-                title: null,
-                text: 'Mark as Complete',
+                title: 'Mark as Complete',
+                text: 'Complete',
                 color: 'green',
                 callback: function (t) {
                     if (t.memberCanWriteToModel('card')){
-                        t.get('card','shared').then(function (cardState){
+                        t.get('card','shared').then(function (t){
                             return t.set('card', 'shared', 'archived', true).then(function () {
                                 return t.closePopup();
                             });
-                        // }).catch(function (error) {
-                        //     console.error('Error archiving card:', error);
+                        }).catch(function (error) {
+                            console.error('Error archiving card:', error);
                         });
                     }
                 }
