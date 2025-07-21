@@ -23,10 +23,11 @@ const getCompleteDetailBadge = function(t) {
                         //     console.error('Error archiving card:', error);
                         // });
                         t.set('card', 'shared', card.closed, true);
-                        t.card('closed')
-                        .then (function(card1)){
-                            console.log('Card Closed: ' + card1.closed)
-                        }
+                        return t
+                            .card('closed')
+                            .then(function(card1){
+                                console.log(card1)
+                        });
                     }
                 }
             }];
