@@ -19,10 +19,10 @@ const getCompleteDetailBadge = function(t) {
                         //     return t.set('card', 'archived', true).then(function () {
                         //         return t.closePopup();
                         //     });
-                            card.set('card', card.closed, true);
-                        }).catch(function (error) {
-                            console.error('Error archiving card:', error);
-                        });
+                        // }).catch(function (error) {
+                        //     console.error('Error archiving card:', error);
+                        // });
+                        t.set('card', card.closed, true);
                     }
                 }
             }];
