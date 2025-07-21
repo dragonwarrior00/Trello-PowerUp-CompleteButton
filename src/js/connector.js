@@ -19,7 +19,7 @@ const getCompleteDetailBadge = function(t) {
                         //     return t.set('card', 'archived', true).then(function () {
                         //         return t.closePopup();
                         //     });
-                            t.set('card', card.closed, true);
+                            card.set('card', card.closed, true);
                         }).catch(function (error) {
                             console.error('Error archiving card:', error);
                         });
