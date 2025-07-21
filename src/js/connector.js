@@ -22,7 +22,7 @@ const getCompleteDetailBadge = function(t) {
                         // }).catch(function (error) {
                         //     console.error('Error archiving card:', error);
                         // });
-                        t.set('card', card.closed, true);
+                        t.set('card', 'shared', card.closed, true);
                     }
                 }
             }];
