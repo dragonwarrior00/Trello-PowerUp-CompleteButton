@@ -3,7 +3,7 @@ const getCompleteDetailBadge = function(t) {
   return t
       // duecomplete = Archived, closed = Mark complete
       .card('id','closed','labels','dueComplete')
-      .then(function (card) {
+      .then(function (t) {
 
         console.log(card)   //temp
 
