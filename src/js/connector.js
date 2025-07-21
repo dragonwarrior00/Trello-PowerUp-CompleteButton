@@ -18,6 +18,7 @@ const getCompleteDetailBadge = function(t) {
                         return t.get('board', 'shared').then(function (data) {
                             console.log(JSON.stringify(data, null, 2));
                             if (data){
+                                console.log("Data is present...")
                                 return data.set('card', 'archived', true).then(function () {
                                     return data.closePopup();
                                 });
