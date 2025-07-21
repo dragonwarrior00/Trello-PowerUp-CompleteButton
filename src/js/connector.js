@@ -16,9 +16,12 @@ const getCompleteDetailBadge = function(t) {
                 callback: function (t) {
                     if (t.memberCanWriteToModel('card')){
                         return t.get('board', 'shared').then(function (data) {
-                            return data.set('card', 'archived', true).then(function () {
-                                return data.closePopup();
-                            });
+                            console.log(JSON.stringify(data, null, 2));
+                            if (data){
+                                return data.set('card', 'archived', true).then(function () {
+                                    return data.closePopup();
+                                });
+                            }
                         }).catch(function (error) {
                             console.error('Error archiving card:', error);
                         });
