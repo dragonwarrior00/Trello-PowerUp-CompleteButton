@@ -15,9 +15,6 @@ const getCompleteDetailBadge = function(t) {
                 color: 'green',
                 callback: function (t) {
                     if (t.memberCanWriteToModel('card')){
-
-                        const t = window.TrelloPowerUp.iframe();
-
                         return t.get('board', 'shared').then(function (data) {
                             return data.set('card', 'archived', true).then(function () {
                                 return data.closePopup();
