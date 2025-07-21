@@ -15,7 +15,8 @@ const getCompleteDetailBadge = function(t) {
                 color: 'green',
                 callback: function (t) {
                     if (t.memberCanWriteToModel('card')){
-                        return t.get(card.id,'shared').then(function (t){
+                        return t.getAll().then(function (t){
+                        // return t.get(card.id,'shared').then(function (t){
                             // return t.set('card', 'archived', true).then(function () {
                             //     return t.closePopup();
                             // });
