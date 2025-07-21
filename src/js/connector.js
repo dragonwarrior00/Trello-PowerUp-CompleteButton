@@ -15,19 +15,22 @@ const getCompleteDetailBadge = function(t) {
                 color: 'green',
                 callback: function (t) {
                     if (t.memberCanWriteToModel('card')){
-                        // t.get('card','shared').then(function (t){
-                        //     return t.set('card', 'archived', true).then(function () {
-                        //         return t.closePopup();
-                        //     });
-                        // }).catch(function (error) {
-                        //     console.error('Error archiving card:', error);
-                        // });
-                        t.set('card', 'shared', card.closed, true);
-                        return t
-                            .card('closed')
-                            .then(function(card1){
-                                console.log(card1)
+
+                        let t = window.TrelloPowerUp.iframe();
+
+                        t.get('card','shared').then(function (t){
+                            return t.set('card', 'archived', true).then(function () {
+                                return t.closePopup();
+                            });
+                        }).catch(function (error) {
+                            console.error('Error archiving card:', error);
                         });
+                        // t.set('card', 'shared', card.closed, true);
+                        // return t
+                        //     .card('closed')
+                        //     .then(function(card1){
+                        //         console.log(card1)
+                        // });
                     }
                 }
             }];
