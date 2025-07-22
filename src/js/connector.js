@@ -15,10 +15,10 @@ const getCompleteDetailBadge = function(t) {
                 color: 'green',
                 callback: function (t) {
                     if (t.memberCanWriteToModel('card')){
-                        t.get('card', 'shared').then(function (t) {
+                        return t.get('card', 'shared').then(function (data) {
                             console.log("Data is present... ")
-                            t.set('card', 'archived', true).then(function () {
-                                t.closePopup();
+                            data.set('card', 'archived', true).then(function () {
+                                data.closePopup();
                             });
                         }).catch(function (error) {
                             console.error('Error archiving card:', error);
