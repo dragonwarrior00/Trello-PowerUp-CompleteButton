@@ -24,9 +24,10 @@ const getCompleteDetailBadge = function(t) {
                         //     console.error('Error archiving card:', error);
                         // });
                         return data.set('card', 'shared', { archived: true }).then(function () {
-                            return data.closePopup();
-                        }).catch(function (error) {
-                            console.error('Error archiving card:', error);
+                                return data.closePopup();
+                            }).catch(function (error) {
+                                console.error('Error archiving card:', error);
+                            });
                         });
                     }
                 }
