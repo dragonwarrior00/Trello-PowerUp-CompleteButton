@@ -15,7 +15,7 @@ const getCompleteDetailBadge = function(t) {
                 color: 'green',
                 callback: function (t) {
                     if (t.memberCanWriteToModel('card')){
-                        t.get('board', 'shared').then(function (data) {
+                        t.get('card', 'shared').then(function (data) {
                             console.log(data);
                             console.log("Data is present...");
                             data.set('card', 'archived', true).then(function () {
