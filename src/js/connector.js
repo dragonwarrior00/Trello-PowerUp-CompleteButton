@@ -30,7 +30,7 @@ const getCompleteDetailBadge = function(t) {
                                     console.log(`Adding label...${card.id}`)
                                     })
                                     .then(function() {
-                                    return data.closePopup();
+                                      t.closePopup();
                                     });
                                 });
                     }
