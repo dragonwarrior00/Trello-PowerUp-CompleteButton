@@ -23,6 +23,16 @@ const getCompleteDetailBadge = function(t) {
                         // }).catch(function (error) {
                         //     console.error('Error archiving card:', error);
                         // });
+                            return t.card('id')
+                                .then(function(card) {
+                                    return t.get('card', 'shared')
+                                        .then(function(data) {
+                                    console.log(`Adding label...${card.id}`)
+                                    })
+                                    .then(function() {
+                                    return t.closePopup();
+                                    });
+                                });
                     }
                 }
             }];
