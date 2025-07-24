@@ -15,7 +15,7 @@ const getCompleteDetailBadge = function(t) {
                 color: 'green',
                 callback: function (t) {
                     if (t.memberCanWriteToModel('card')){
-                        return t.get('card', 'shared').then(function (data) {
+                        // return t.get('card', 'shared').then(function (data) {
                         //     console.log("Data is present... ")
                         //     data.set('card', 'archived', true).then(function () {
                         //         data.closePopup();
@@ -23,12 +23,6 @@ const getCompleteDetailBadge = function(t) {
                         // }).catch(function (error) {
                         //     console.error('Error archiving card:', error);
                         // });
-                        return data.set('card', 'shared', { archived: true }).then(function () {
-                                return data.closePopup();
-                            }).catch(function (error) {
-                                console.error('Error archiving card:', error);
-                            });
-                        });
                     }
                 }
             }];
