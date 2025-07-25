@@ -4,7 +4,6 @@ const getCompleteDetailBadge = function(t) {
       // duecomplete = Archived, closed = Mark complete
       .card('id','closed','labels','dueComplete')
       .then(function (card) {
-
         console.log(card);   //temp
 
         if (!card.closed){
@@ -23,16 +22,21 @@ const getCompleteDetailBadge = function(t) {
                         // }).catch(function (error) {
                         //     console.error('Error archiving card:', error);
                         // });
-                            return t.card('id')
-                                .then(function(card) {
-                                    return t.get('card', 'shared')
-                                        .then(function(data) {
-                                    console.log(`Adding label...${card.id}`)
-                                    })
-                                    .then(function() {
-                                      t.closePopup();
-                                    });
-                                });
+                        // Add a green "Complete" label to the card
+                      return t.getRestApi()
+                        .then(function(api) {
+                          return api.addLabelToCard(card.id, {
+                            color: 'green',
+                            name: 'Complete'
+                          });
+                        })
+                        .then(function() {
+                          return t.closePopup();
+                        })
+                        .catch(function(error) {
+                          console.error('Error adding label:', error);
+                          return t.closePopup();
+                        });
                     }
                 }
             }];
