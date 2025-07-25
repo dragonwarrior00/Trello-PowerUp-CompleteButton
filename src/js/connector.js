@@ -25,6 +25,7 @@ const getCompleteDetailBadge = function(t) {
                         // Add a green "Complete" label to the card
                       return t.getRestApi()
                         .then(function(api) {
+                          console.log(`API: ${api}`);
                           return api.addLabelToCard(card.id, {
                             color: 'green',
                             name: 'Complete'
