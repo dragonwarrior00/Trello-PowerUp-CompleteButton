@@ -38,17 +38,6 @@ const getCompleteDetailBadge = function(t) {
                           return t.closePopup();
                         });
                     }
-                }, {
-                    // this is the icon that will be shown in the badge
-                    icon: {
-                        url: 'https://trello.com/assets/complete-icon.png',
-                        width: 24,
-                        height: 24
-                    }
-
-                    appKey: 'd1aaeec275328ca489fb077f25dee106',
-                    appName: 'Complete',
-                    appAuthor: 'DragonWarrior00'
                 }
             }];
         }
@@ -57,9 +46,16 @@ const getCompleteDetailBadge = function(t) {
 }
 
 
-window.TrelloPowerUp.initialize({
-  'card-detail-badges': function (t) {
-    // return an array of cards that adds Complete Badge
-    return getCompleteDetailBadge(t)
+window.TrelloPowerUp.initialize(
+  {
+    'card-detail-badges': function (t) {
+      // return an array of cards that adds Complete Badge
+      return getCompleteDetailBadge(t)
+    }
   },
-});
+  {
+      appKey: 'd1aaeec275328ca489fb077f25dee106',
+      appName: 'Complete',
+      appAuthor: 'DragonWarrior00',
+  }
+);
