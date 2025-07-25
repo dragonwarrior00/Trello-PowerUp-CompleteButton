@@ -23,21 +23,18 @@ const getCompleteDetailBadge = function(t) {
                         //     console.error('Error archiving card:', error);
                         // });
                         // Add a green "Complete" label to the card
-                      return t.getRestApi()
-                        .then(function(api) {
-                          console.log(`API: ${api}`);
-                          return api.addLabelToCard(card.id, {
-                            color: 'green',
-                            name: 'Complete'
-                          });
-                        })
-                        .then(function() {
-                          return t.closePopup();
-                        })
-                        .catch(function(error) {
-                          console.error('Error adding label:', error);
-                          return t.closePopup();
-                        });
+                      const api = t.getRestApi();
+                      return api.addLabelToCard(card.id, {
+                        color: 'green',
+                        name: 'Complete'
+                      })
+                      .then(function() {
+                        return t.closePopup();
+                      })
+                      .catch(function(error) {
+                        console.error('Error adding label:', error);
+                        return t.closePopup();
+                      });
                     }
                 }
             }];
@@ -52,7 +49,7 @@ window.TrelloPowerUp.initialize(
     'card-detail-badges': function (t) {
       // return an array of cards that adds Complete Badge
       return getCompleteDetailBadge(t)
-    }
+    },
   },
   {
       appKey: 'd1aaeec275328ca489fb077f25dee106',
