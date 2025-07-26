@@ -15,8 +15,8 @@ const getCompleteDetailBadge = function(t) {
             if (t.memberCanWriteToModel('card')) {
               // Add a green "Complete" label to the card using Trello REST API
               // Replace with your API key and token
-              const apiKey = 'YOUR_API_KEY';
-              const token = 'YOUR_TOKEN';
+              const apiKey = '%%API_KEY%%';
+              const token = '%%API_TOKEN%%';
               const cardId = card.id;
               const url = `https://api.trello.com/1/cards/${cardId}/labels?key=${apiKey}&token=${token}`;
               const data = {
