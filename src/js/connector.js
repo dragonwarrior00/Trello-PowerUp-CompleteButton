@@ -18,8 +18,8 @@ const getCompleteDetailBadge = function(t) {
               const apiKey = '%%API_KEY%%';
               const token = '%%API_TOKEN%%';
 
-              console.log('API Key: %%API_KEY%%');
-              console.log('Token: %%API_TOKEN%%');
+              console.log(`API Key: %%API_KEY%%`);
+              console.log(`Token: %%API_TOKEN%%`);
 
               const cardId = card.id;
               const url = `https://api.trello.com/1/cards/${cardId}/labels?key=${apiKey}&token=${token}`;
