@@ -2,7 +2,6 @@
   "name": "Trello-PowerUp-CompleteButton",
   "version": "1.0.0",
   "description": "A Trello Power-Up that will put a Complete button on the card",
-  "main": "index.js",
   "repository": "https://github.com/dragonwarrior00/Trello-PowerUp-CompleteButton.git",
   "author": "DragonWarrior00 <lamberthjosh@gmail.com>",
   "license": "MIT",
@@ -10,6 +9,7 @@
     "build": "parcel build src/html/*.html"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.5"
+    "parcel": "^2.15.4",
+    "parcel-plugin-interpolate-env": "^0.0.1"
   }
 }

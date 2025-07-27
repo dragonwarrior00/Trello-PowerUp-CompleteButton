@@ -4,7 +4,7 @@
 node_modules/
 
 # Parcel.js cache folder
-.cache/
+.parcel-cache/
 
 # Parcel.js build folder
 dist/
